@@ -1,29 +1,65 @@
 <!DOCTYPE html>
 <html>
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+#text{
+    color: azure;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 200px;
+    text-transform: uppercase;
+    font-family: "DejaVu Sans Mono, monospace";
+    font-weight: 700;
+}
+
+#new_text{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 100px;
+    text-transform: uppercase;
+    font-family: "DejaVu Sans Mono, monospace";
+    font-weight: 700;
+}
+    </style>
     <head>
         <meta charset="utf-8">
         <title>Mainpage</title>
-        <link rel="style" href="style.css">
     </head>
     <body>
 
 
         <div id="text">
+        </div>
+
+        <div id="new_text">
 
         </div>
     <script type="text/javascript">
     var i=0,text;
     
     text = "Tahan õppida malet mängima"
-
-    function typing_stle() {
+    new_text = ""
+    
+    function typing_style() {
         if(i<text.length){
             document.getElementById("text").innerHTML += text.charAt(i);
             i++;
-            setTimeout(typing_stle,50);
+            setTimeout(typing_style,100);
         }
     }
-    typing_stle();
+
+    function show() {
+        document.getElementById("new_text").innerHTML = "Kliki alustamiseks"
+    }
+
+    typing_style();
+    setTimeout(show,3300);
     </script>
     </body>
 </html>
