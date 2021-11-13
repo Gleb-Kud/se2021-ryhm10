@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<style>
+.center {
+ text-align: center
+}
+table, th, td {
+    border:1px solid black;
+}
+body {
+  background-color: #FFF0F5;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFF0F5;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.desc {
+  padding: 30px;
+  text-align: center;
+}
+</style>
+<head>
+<title>Hinnakiri</title>
+</head>
+<body>
+
+<h1></h1>
+<h2>Hinnakiri</h2>
+<p>Hinnad on erinevad</p>
+
+<table style="width:100%">
+    <tr>
+      <th>Esimene asi</th>
+      <th>Teine asi</th>
+      <th>Kolmas asi</th>
+    </tr>
+    <tr>
+      <td>Kõrge hind</td>
+      <td>Mõistlik hind</td>
+      <td>Madal hind</td>
+    </tr>
+</table>
+
+<div class="dropdown">
+    <button class="dropbtn">Rohkem hindu</button>
+    <div class="dropdown-content">
+    <a href="#">Veel hind</a>
+</div>
+
+<script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Soodsaim hind.";
+    }
+</script>
+
+<p id="demo">Soodsad hinnad</p>
+<button type="button" onclick="myFunction()">Kõige soodsam hind</button>
+</div>
+</body>
+</html>
